@@ -1,0 +1,290 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+ -color: rgb(255, 255, 255);
+ text-align: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.drink-card {
+  border: 1px solid #e6a7a7;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.drink-title {
+  font-weight: bold;
+}
+
+.drink-image {
+  max-width: 200px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Header styles */
+header {
+  background-color: rgb(213, 176, 176);
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: rgb(255, 238, 243);
+  text-decoration: none;
+}
+
+/* Main styles */
+main {
+  padding: 20px 0;
+  color: rgb(226, 182, 182);
+}
+
+/* Section styles */
+section {
+  margin-bottom: 40px;
+  color: rgb(18, 17, 17);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  color: rgb(184, 149, 149);
+}
+
+/* Main content styles */
+.main-content {
+  margin-left: 270px;
+  padding: 20px;
+  color: white;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+  color: rgb(234, 179, 183);
+}
+
+/* Paragraph styles */
+p {
+  line-height: 1.5;
+}
+
+/* Button styles */
+.button {
+  background-color: rgb(253, 249, 249);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(249, 244, 249);
+}
+
+.container .cocktail-data {
+  display: none;
+}
+
+.container .search-box {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background: #c39c9c;
+}
+
+.container .search-box i {
+  color: rgb(222, 192, 192);
+  position: relative;
+  left: 8px;
+}
+
+.container .search-box input {
+  all: unset;
+  height: 50px;
+  width: 100%;
+  margin-left: 20px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: rgb(235, 209, 209);
+}
+
+.container .img-box {
+  height: 150px;
+  width: 150px;
+  margin-top: 25px;
+  border-radius: 100%;
+  margin-left: 80px;
+}
+
+.container .img-box img {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+
+.container .cocktail-name {
+  height: 35px;
+  background: #fafafa;
+  color: rgb(224, 186, 186);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin-top: -10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  white-space: nowrap;
+}
+
+.container .cocktail-name i {
+  color: rgb(216, 147, 147);
+}
+
+.container .ingredients-box {
+  width: 100%;
+  margin-top: 40px;
+  padding: 5px;
+}
+
+.container .ingredients-box h3 {
+  color: rgb(234, 153, 153);
+  font-size: 14px;
+  position: relative;
+  top: 5px;
+  margin-left: 5px;
+  color: #dbb0c1;
+}
+
+.container .ingredients-box .ingredients ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.8em 1.1em;
+  padding: 1.2em 0 0 1.2em;
+  font-size: 1em;
+}
+
+.container .ingredients-box .ingredients li {
+  color: white;
+  font-size: 12px;
+}
+
+.container .start-mixing-btn {
+  all: unset;
+  height: 35px;
+  width: 100px;
+  border-radius: 30px;
+  color: #2c2028;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid #dbacc2;
+}
+
+.container .start-mixing-btn:hover {
+  background: #ca798b;
+  color: rgb(197, 150, 150);
+}
+
+.instructions {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fdfdfd;
+  border-radius: 7px;
+  padding: 20px;
+  left: -100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  transition: all 0.2s;
+}
+
+.instructions .close-btn {
+  height: 35px;
+  width: 35px;
+  background: #dda9bc;
+  color: rgb(226, 34, 111);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.instructions .instruction {
+  margin-top: 10px;
+  color: rgb(174, 137, 137);
+  font-size: 14px;
+}
+
+.container .msg {
+  color: rgb(232, 9, 94);
+  text-align: center;
+  margin-top: 15px;
+}
+
+::selection {
+  background: rgba(238, 234, 235, 0.8);
+  color: rgba(255, 255, 255, 0.894);
+}
